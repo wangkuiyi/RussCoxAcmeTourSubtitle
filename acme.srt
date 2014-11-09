@@ -194,3 +194,63 @@ On larger screens, it can comfortablly supports 3 or 4.
 44
 00:02:09,001 --> 00:02:12,001
 Each column contains some number of windows.
+
+45
+00:02:12,001 --> 00:02:17,001
+On the screen right now, the left window contains the single window showing the quick UI tour.
+
+46
+00:02:17,001 --> 00:02:19,001
+And the right column contains two windows
+
+47
+00:02:19,001 --> 00:02:21,001
+showing a directory and a shell session.
+
+48
+00:02:21,001 --> 00:02:23,001
+Each window has two parts. 
+
+49
+00:02:23,001 --> 00:02:27,001
+The top line or tag set on light blue background
+
+50
+00:02:27,001 --> 00:02:30,001
+shows the filename and some commands such as Del and Snarf.
+
+51
+00:02:30,001 --> 00:02:35,001
+The body, set on light yellow background shows the window content.
+
+52
+00:02:35,001 --> 00:02:39,001
+Each tag has a nearly square layout box to the left of the tag.
+
+53
+00:02:39,001 --> 00:02:44,001
+The layout box fills with dark blue when a window has editting that indicates you might want to save it.
+
+54
+00:02:44,001 --> 00:02:46,001
+Each column also has a  tag 
+
+55
+00:02:46,001 --> 00:02:50,001
+with useful commands and layout box at the tone.
+
+56
+00:02:50,001 --> 00:02:53,001
+Because Acme was created on Plan 9, 
+
+57
+00:02:53,001 --> 00:02:56,001
+its UI assumes that you have a three-button mouse and a graphical display.
+
+58
+00:02:56,001 --> 00:02:59,001
+There is no text-only mode or cursor addressing.
+
+59
+00:02:59,001 --> 00:03:03,001
+Since you cannot watch my hand using the mouse on the screencast,
