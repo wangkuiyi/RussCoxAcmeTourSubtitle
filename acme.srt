@@ -1,0 +1,35 @@
+1
+00:00:1,001 --> 00:00:07,001
+Welcome. This is a quick tour of Acme, a text editor created by Rob Pike almost 20 years ago as part of Plan 9.
+
+2
+00:00:07,001 --> 00:00:16,001
+Although Rob created Acme on Plan 9, Acme is now available on FreeBSD, Linux, OS X and other Unix systems as part of Plan 9 from User Space.
+
+3
+00:00:16,001 --> 00:00:21,001
+There is also a port of Acme to the Inferno operating system which gives it a way to running on Windows.
+
+4
+00:00:21,001 --> 00:00:26,001
+The video description has a link to a page which points to downloads and more information.
+
+5
+00:00:26,001 --> 00:00:34,001
+For me, the distinguishing feature of Acme is it works well alongside the surrounding system instead of trying to be a clean environment all by itself.
+
+6
+00:00:34,001 --> 00:00:39,001
+Acme does not enjoy nearly the popularity of editors like Emacs and VI do.
+
+7
+00:00:39,001 --> 00:00:41,001
+But it has a small dedicated following.
+
+8
+00:00:41,001 --> 00:00:44,001
+When I had to switch to using Unix workstations again in the early 2000's,
+
+9
+00:00:41,001 --> 00:00:50,001
+I missed Acme so much that I ported all Plan 9 user programs to Unix to get it back.
