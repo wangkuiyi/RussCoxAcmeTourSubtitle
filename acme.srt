@@ -1,35 +1,169 @@
 1
-00:00:1,001 --> 00:00:07,001
-Welcome. This is a quick tour of Acme, a text editor created by Rob Pike almost 20 years ago as part of Plan 9.
+00:00:01,001 --> 00:00:04,951
+Welcome. This is a quick tour of Acme, a
+text editor created by Rob Pike...
 
 2
-00:00:07,001 --> 00:00:16,001
-Although Rob created Acme on Plan 9, Acme is now available on FreeBSD, Linux, OS X and other Unix systems as part of Plan 9 from User Space.
+00:00:04,961 --> 00:00:06,991
+almost 20 years ago as part of Plan 9.
 
 3
-00:00:16,001 --> 00:00:21,001
-There is also a port of Acme to the Inferno operating system which gives it a way to running on Windows.
+00:00:07,001 --> 00:00:11,561
+Although Rob created Acme on Plan 9,
+Acme is now available on FreeBSD, Linux,
 
 4
-00:00:21,001 --> 00:00:26,001
-The video description has a link to a page which points to downloads and more information.
+00:00:11,571 --> 00:00:15,231
+OS X and other Unix systems as part of
+Plan 9 from User Space.
 
 5
-00:00:26,001 --> 00:00:34,001
-For me, the distinguishing feature of Acme is it works well alongside the surrounding system instead of trying to be a clean environment all by itself.
+00:00:16,001 --> 00:00:19,510
+There is also a port of Acme to the
+Inferno operating system which gives...
 
 6
-00:00:34,001 --> 00:00:39,001
-Acme does not enjoy nearly the popularity of editors like Emacs and VI do.
+00:00:19,520 --> 00:00:20,991
+it a way to running on Windows.
 
 7
-00:00:39,001 --> 00:00:41,001
-But it has a small dedicated following.
+00:00:21,001 --> 00:00:25,049
+The video description has a link to a
+page which points to downloads and...
 
 8
-00:00:41,001 --> 00:00:44,001
-When I had to switch to using Unix workstations again in the early 2000's,
+00:00:25,059 --> 00:00:25,991
+more information.
 
 9
-00:00:41,001 --> 00:00:50,001
-I missed Acme so much that I ported all Plan 9 user programs to Unix to get it back.
+00:00:26,001 --> 00:00:29,958
+For me, the distinguishing feature of
+Acme is it works well alongside the...
+
+10
+00:00:29,968 --> 00:00:33,991
+surrounding system instead of trying to
+be a complete environment all by itself.
+
+11
+00:00:34,001 --> 00:00:38,141
+Acme does not enjoy nearly the
+popularity of editors like Emacs and...
+
+12
+00:00:38,151 --> 00:00:38,751
+VI do,
+
+13
+00:00:39,001 --> 00:00:40,001
+but it has a small dedicated following.
+
+14
+00:00:40,001 --> 00:00:45,001
+When I had to switch to using Unix
+workstations again in the early 2000's,
+
+15
+00:00:45,001 --> 00:00:49,001
+I missed Acme so much that I ported all
+Plan 9 user programs to Unix to get...
+
+16
+00:00:49,001 --> 00:00:50,231
+it back.
+
+17
+00:00:50,001 --> 00:00:53,408
+Acme creates an experience where text is
+a dynamic thing and you can execute it,
+
+18
+00:00:53,418 --> 00:00:54,991
+and assign it arbitrary meanings.
+
+19
+00:00:55,001 --> 00:00:59,441
+where plugin written in any language at
+all can interact with Acme to control
+
+20
+00:00:59,451 --> 00:00:59,991
+windows.
+
+21
+00:01:00,001 --> 00:01:02,854
+The result is that you can keep using
+the tools you have instead of having...
+
+22
+00:01:02,864 --> 00:01:03,991
+to learn the whole new system.
+
+23
+00:01:04,001 --> 00:01:07,661
+But you can still custom them to fit well into Acme.
+
+24
+00:01:08,001 --> 00:01:11,559
+In this screencast I am going to try to
+convey a few of what it is like to...
+
+25
+00:01:11,569 --> 00:01:11,991
+use Acme.
+
+26
+00:01:12,001 --> 00:01:15,489
+I am going to start with the basics and
+build up to a short programming session...
+
+27
+00:01:15,499 --> 00:01:15,991
+at the end.
+
+28
+00:01:16,001 --> 00:01:20,381
+One final note before the content, I
+sized the video to fit Youtube...
+
+29
+00:01:20,391 --> 00:01:21,991
+large playing video mode exactly.
+
+30
+00:01:22,001 --> 00:01:25,421
+If the screen text look fuzzy, please
+switch to that mode.
+
+31
+00:01:29,001 --> 00:01:30,991
+Because Acme was designed as part of
+Plan 9,
+
+32
+00:01:31,001 --> 00:01:35,021
+it is a graphical program not cursor
+addressed and makes extensive use of
+
+33
+00:01:35,031 --> 00:01:35,631
+the mouse.
+
+34
+00:01:36,001 --> 00:01:38,991
+This screen you are looking at is a
+small Acme screen.
+
+35
+00:01:39,001 --> 00:01:42,181
+Its size fits exactly to Youtube 854 by
+480 video box.
+
+36
+00:01:43,001 --> 00:01:44,991
+Normally you use a larger display.
+
+37
+00:01:45,001 --> 00:01:48,781
+I'd like to recommend to use fullscreen
+as you see in the video.
