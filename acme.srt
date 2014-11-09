@@ -165,5 +165,32 @@ Normally you use a larger display.
 
 37
 00:01:45,001 --> 00:01:48,781
-I'd like to recommend to use fullscreen
-as you see in the video.
+I'd like to to use fullscreen as you see in the video.
+
+38
+00:01:48,781 --> 00:01:53,001
+On a laptop I foot back and forth between Acme and conventional desktop.
+
+39
+00:01:53,001 --> 00:01:57,001
+When I work I use two monitors, where Acme on one, and everything else on the other.
+
+40
+00:01:57,001 --> 00:02:00,001
+Acme takes care of window layout for you.
+
+41
+00:02:00,001 --> 00:02:04,001
+It automatically choosing location for each window and arrange them into columns.
+
+42
+00:02:04,001 --> 00:02:06,001
+In this tour, Acme has just two columns.
+
+43
+00:02:06,001 --> 00:02:09,001
+On larger screens, it can comfortablly supports 3 or 4.
+
+44
+00:02:09,001 --> 00:02:12,001
+Each column contains some number of windows.
