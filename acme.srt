@@ -254,3 +254,239 @@ There is no text-only mode or cursor addressing.
 59
 00:02:59,001 --> 00:03:03,001
 Since you cannot watch my hand using the mouse on the screencast,
+
+60
+00:03:03,001 --> 00:03:07,001
+I have to modiy Acme to show the button currently held down above the mouse pointer.
+
+61
+00:03:07,001 --> 00:03:13,001
+Acme refers left, middle, and right buttons as button 1, button 2, and button 3.
+
+62
+00:03:13,001 --> 00:03:17,001
+The scroll bar to the left of the body is a vetnum standard,
+
+63
+00:03:17,001 --> 00:03:19,001
+but more powerful than most.
+
+64
+00:03:19,001 --> 00:03:23,001
+When you have a window that cannot be shown at once like the silly sampler.
+
+65
+00:03:26,001 --> 00:03:33,001
+The scroll bar darkens to represent the entire content, with the light bar showing currently you are viewing.
+
+66
+00:03:33,001 --> 00:03:37,001
+You can click the bar using button 2 to move it directly to the part.
+
+67
+00:03:37,001 --> 00:03:42,001
+You can also click button 1 to scroll up or button 3 to scroll down.
+
+68
+00:03:42,001 --> 00:03:49,001
+The amount the click to scroll depends on where on the scroll bar you click.
+
+69
+00:03:49,001 --> 00:03:53,001
+If you click just one line down from the top, each click scrolls by one line.
+
+70
+00:03:53,001 --> 00:03:58,001
+If you click three quaters away down from the window, 
+
+71
+00:03:58,001 --> 00:04:00,001
+each click scrolls by three quaters of the window.
+
+72
+00:04:02,001 --> 00:04:05,001
+You can also use the mouse to manipulate the window by
+
+73
+00:04:05,001 --> 00:04:06,001
+clicking in the layout box.
+
+74
+00:04:07,001 --> 00:04:10,001
+Clicking button 1 expands the window in the column,
+
+75
+00:04:10,001 --> 00:04:11,001
+nugging other windows away.
+
+76
+00:04:11,001 --> 00:04:16,001
+Dragging button 1 reposition the window without moving others.
+
+77
+00:04:16,001 --> 00:04:22,001
+Clicking button 2 makes the window as big as possible while leaving the other windows tags visible.
+
+78
+00:04:22,001 --> 00:04:27,001
+Clicking button 3 makes the window take over the entire column, hiding the other windows.
+
+79
+00:04:27,001 --> 00:04:32,001
+Clicking one of the other buttons brings them back.
+
+80
+00:04:46,001 --> 00:04:50,001
+When manipulating text within Acme, the three buttons have distinct roles.
+
+81
+00:04:50,001 --> 00:04:52,001
+Button 1 is for selecting text.
+
+82
+00:04:54,001 --> 00:04:57,001
+Button 2 is for executing commands.
+
+83
+00:04:57,001 --> 00:05:01,001
+For example, I have been clicking the "Slide+" command to advance to the next slide.
+
+84
+00:05:01,001 --> 00:05:04,001
+Button 3 is for searching and loading.
+
+85
+00:05:04,001 --> 00:05:10,001
+If I select the word "button"  with button 3, Acme searches for the next instance of the word "button" and moves to it.
+
+86
+00:05:10,001 --> 00:05:15,001
+In the directory window, if I select the filename "sampler" with button 3,
+
+87
+00:05:15,001 --> 00:05:18,001
+Acme opens a new window for that file.
+
+88
+00:05:18,001 --> 00:05:23,001
+I can then execute, using button 2, the command "Del" to close the window.
+
+89
+00:05:23,001 --> 00:05:28,001
+I do not have to select text so carefully, when using button 2 or 3,
+
+90
+00:05:28,001 --> 00:05:32,001
+Acme would expend ordinary selection to the given word.
+
+91
+00:05:32,001 --> 00:05:38,001
+So I can just right click on "button", or on "sampler", and just middle click "Del".
+
+92
+00:05:40,001 --> 00:05:44,001
+Acme also assigns convinient meaning to combinations of buttons. 
+
+93
+00:05:44,001 --> 00:05:47,001
+If you select some text with  button 1
+
+94
+00:05:47,001 --> 00:05:51,001
+but keep it held down, then clicking button 2 cuts that text.
+
+95
+00:05:51,001 --> 00:05:54,001
+Clicking button 3 pastes over that text.
+
+96
+00:05:54,001 --> 00:05:55,001
+Cut
+
+97
+00:05:55,001 --> 00:05:57,001
+Paste
+
+98
+00:06:00,001 --> 00:06:04,001
+A frequent motion is to combine the two -- selecting text with button 1
+
+99
+00:06:04,001 --> 00:06:09,001
+Clicking button 2 to cut it, and click button 3 to paste it back, before releasing button 1.
+
+100
+00:06:09,001 --> 00:06:10,001
+that amounts to "Copy".
+
+101
+00:06:10,001 --> 00:06:14,001
+A less common "chord" is to select text with button 2 for executing, but
+
+102
+00:06:14,001 --> 00:06:19,001
+add button 1 to the cord. That executes that command with an argument.
+
+103
+00:06:20,001 --> 00:06:27,001
+For example, we execute the command "echo" with argument "button"
+
+104
+00:06:31,001 --> 00:06:35,001
+Let's look a little more in depth at executing commands with button 2.
+
+105
+00:06:35,001 --> 00:06:39,001
+We'v seen that useful commands like Del are listed  in the window tag.
+
+106
+00:06:39,001 --> 00:06:42,001
+But the tag is just a nice place to put text that doesn't belong to the body.
+
+107
+00:06:42,001 --> 00:06:44,001
+Text at anywhere can be executed.
+
+108
+00:06:44,001 --> 00:06:49,001
+For example, I can select the word "Cut" here with button 1,
+
+109
+00:06:49,001 --> 00:06:53,001
+and click on it with button 2 to execute it. It cuts itself.
+
+110
+00:06:53,001 --> 00:06:59,001
+Similarly, I can select something else, and then execute "Paste".
+
+111
+00:06:59,001 --> 00:07:00,001
+to paste what I cut.
+
+112
+00:07:00,001 --> 00:07:08,001
+There is also a useful builtin command called "Edit" , that accepts the editing language used in the editor Sam.
+
+113
+00:07:11,001 --> 00:07:19,001
+If I execute the comand "Edit, s/tag/TAG/g", it apply the "s" command to entire window body, denoted by comma.
+
+114
+00:07:22,001 --> 00:07:27,001
+Acme would not be very powerful if all the commands have to be provided by Acme itself.
+
+115
+00:07:27,001 --> 00:07:33,001
+External programs can be invoked as commands too, as we did with "echo", similar to running them in the shell prompt.
+
+116
+00:07:33,001 --> 00:07:40,001
+Executing "date" actually runs the "date" program and put the output in a temporary windows created to hold the output.
+
+117
+00:07:40,001 --> 00:07:47,001
+When you run a command in a particular directory, the window for the output has a title name for a file "+Errors" for that directory,
+
+118
+00:07:47,001 --> 00:07:53,001
+although that is a name of a file that does not exist on disk; it is just the Acme title for the window.
