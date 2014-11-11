@@ -440,4 +440,28 @@ Commands beginning with ">" represents a pipe only write selection through that 
 
 123
 00:08:14,001 --> 00:08:17,001
-It does not read the output back into the selection.
+It does not read the result back into the selection.
+
+124
+00:08:17,001 --> 00:08:22,001
+If I click ">spell", it pipes the selected text to "spell".
+
+125
+00:08:22,001 --> 00:08:25,001
+which tells me with one of the error window that I mis-spelled "execute".
+
+126
+00:08:25,001 --> 00:08:32,001 
+Similarly, a command beginning with "<" only reads the commands output into the selection.
+
+127
+00:08:32,001 --> 00:08:36,001
+The command runs with no input.
+
+128
+00:08:36,001 --> 00:08:39,001
+Clicking on the line "<astro" runs the astro program.
+
+129
+00:08:39,001 --> 00:08:41,001
+which tells which I can see in the sky and when.
