@@ -1,81 +1,50 @@
 1
-00:00:01,001 --> 00:00:04,951
-Welcome. This is a quick tour of Acme, a
-text editor created by Rob Pike...
-
-2
-00:00:04,961 --> 00:00:06,991
-almost 20 years ago as part of Plan 9.
+00:00:01,001 --> 00:00:06,99
+Welcome. This is a quick tour of Acme, a text editor created by Rob Pike almost 20 years ago as part of Plan 9.
 
 3
 00:00:07,001 --> 00:00:11,561
-Although Rob created Acme on Plan 9,
-Acme is now available on FreeBSD, Linux,
+Although Rob created Acme on Plan 9, Acme is now available on FreeBSD, Linux,...
 
 4
 00:00:11,571 --> 00:00:15,231
-OS X and other Unix systems as part of
-Plan 9 from User Space.
+OS X and other Unix systems as part of Plan 9 from User Space.
 
 5
-00:00:16,001 --> 00:00:19,510
-There is also a port of Acme to the
-Inferno operating system which gives...
-
-6
-00:00:19,520 --> 00:00:20,991
-it a way to running on Windows.
+00:00:16,001 --> 00:00:20,99
+There is also a port of Acme to the Inferno operating system which gives it a way to running on Windows.
 
 7
 00:00:21,001 --> 00:00:25,049
-The video description has a link to a
-page which points to downloads and...
-
-8
-00:00:25,059 --> 00:00:25,991
-more information.
+The video description has a link to a page which points to downloads and more information.
 
 9
 00:00:26,001 --> 00:00:29,958
-For me, the distinguishing feature of
-Acme is it works well alongside the...
+For me, the distinguishing feature of Acme is it works well alongside the...
 
 10
 00:00:29,968 --> 00:00:33,991
-surrounding system instead of trying to
-be a complete environment all by itself.
+surrounding system instead of trying to be a complete environment all by itself.
 
 11
 00:00:34,001 --> 00:00:38,141
-Acme does not enjoy nearly the
-popularity of editors like Emacs and...
-
-12
-00:00:38,151 --> 00:00:38,751
-VI do,
+Acme does not enjoy nearly the popularity of editors like Emacs and VI do,
 
 13
-00:00:39,001 --> 00:00:40,001
+00:00:39,001 --> 00:00:41,001
 but it has a small dedicated following.
 
 14
-00:00:40,001 --> 00:00:45,001
-When I had to switch to using Unix
-workstations again in the early 2000's,
+00:00:41,001 --> 00:00:45,001
+When I had to switch to using Unix workstations again in the early 2000's,
 
 15
 00:00:45,001 --> 00:00:49,001
-I missed Acme so much that I ported all
-Plan 9 user programs to Unix to get...
-
-16
-00:00:49,001 --> 00:00:50,231
-it back.
+I missed Acme so much that I ported all Plan 9 user programs to Unix to get it back.
 
 17
 00:00:50,001 --> 00:00:53,408
-Acme creates an experience where text is
-a dynamic thing and you can execute it,
+Acme creates an experience where text is a dynamic thing and you can execute it,
 
 18
 00:00:53,418 --> 00:00:54,991
@@ -83,81 +52,47 @@ and assign it arbitrary meanings.
 
 19
 00:00:55,001 --> 00:00:59,441
-where plugin written in any language at
-all can interact with Acme to control
-
-20
-00:00:59,451 --> 00:00:59,991
-windows.
+where plugin written in any language at all can interact with Acme to control windows.
 
 21
-00:01:00,001 --> 00:01:02,854
-The result is that you can keep using
-the tools you have instead of having...
-
-22
-00:01:02,864 --> 00:01:03,991
-to learn the whole new system.
+00:01:00,001 --> 00:01:05,001
+The result is that you can keep using the tools you have instead of having to learn the whole new system.
 
 23
-00:01:04,001 --> 00:01:07,661
-But you can still custom them to fit well into Acme.
+00:01:05,001 --> 00:01:07,661
+But you can still customize them to fit well into Acme.
 
 24
-00:01:08,001 --> 00:01:11,559
-In this screencast I am going to try to
-convey a few of what it is like to...
-
-25
-00:01:11,569 --> 00:01:11,991
-use Acme.
+00:01:08,001 --> 00:01:12,001
+In this screencast I am going to try to convey a few of what it is like to use Acme.
 
 26
-00:01:12,001 --> 00:01:15,489
-I am going to start with the basics and
-build up to a short programming session...
-
-27
-00:01:15,499 --> 00:01:15,991
-at the end.
+00:01:12,001 --> 00:01:16,001
+I am going to start with the basics and build up to a short programming session at the end.
 
 28
-00:01:16,001 --> 00:01:20,381
-One final note before the content, I
-sized the video to fit Youtube...
-
-29
-00:01:20,391 --> 00:01:21,991
-large playing video mode exactly.
+00:01:16,001 --> 00:01:22,001
+One final note before the content, I sized the video to fit Youtube large vidoe playing mode exactly.
 
 30
 00:01:22,001 --> 00:01:25,421
-If the screen text look fuzzy, please
-switch to that mode.
+If the screen text look fuzzy, please switch to that mode.
 
 31
 00:01:29,001 --> 00:01:30,991
-Because Acme was designed as part of
-Plan 9,
+Because Acme was designed as part of Plan 9,
 
 32
-00:01:31,001 --> 00:01:35,021
-it is a graphical program not cursor
-addressed and makes extensive use of
-
-33
-00:01:35,031 --> 00:01:35,631
-the mouse.
+00:01:31,001 --> 00:01:35,631
+it is a graphical program, not cursor addressed, and makes extensive use of the mouse.
 
 34
 00:01:36,001 --> 00:01:38,991
-This screen you are looking at is a
-small Acme screen.
+This screen you are looking at is a small Acme screen.
 
 35
 00:01:39,001 --> 00:01:42,181
-Its size fits exactly to Youtube 854 by
-480 video box.
+Its size fits exactly to Youtube 854 by 480 video box.
 
 36
 00:01:43,001 --> 00:01:44,991
@@ -165,7 +100,7 @@ Normally you use a larger display.
 
 37
 00:01:45,001 --> 00:01:48,781
-I'd like to to use fullscreen as you see in the video.
+I'd like to to use Acme with fullscreen as you see in the video.
 
 38
 00:01:48,781 --> 00:01:53,001
@@ -197,15 +132,11 @@ Each column contains some number of windows.
 
 45
 00:02:12,001 --> 00:02:17,001
-On the screen right now, the left window contains the single window showing the quick UI tour.
+On the screen right now, the left column contains the single window showing a quick UI tour.
 
 46
-00:02:17,001 --> 00:02:19,001
-And the right column contains two windows
-
-47
-00:02:19,001 --> 00:02:21,001
-showing a directory and a shell session.
+00:02:17,001 --> 00:02:21,001
+And the right column contains two windows showing a directory and a shell session.
 
 48
 00:02:21,001 --> 00:02:23,001
@@ -213,7 +144,7 @@ Each window has two parts.
 
 49
 00:02:23,001 --> 00:02:27,001
-The top line or tag set on light blue background
+The top line, or tag, set on light blue background,
 
 50
 00:02:27,001 --> 00:02:30,001
@@ -221,7 +152,7 @@ shows the filename and some commands such as Del and Snarf.
 
 51
 00:02:30,001 --> 00:02:35,001
-The body, set on light yellow background shows the window content.
+The body, set on light yellow background, shows the window content.
 
 52
 00:02:35,001 --> 00:02:39,001
@@ -229,7 +160,7 @@ Each tag has a nearly square layout box to the left of the tag.
 
 53
 00:02:39,001 --> 00:02:44,001
-The layout box fills with dark blue when a window has editting that indicates you might want to save it.
+The layout box fills with dark blue when a window has editing that indicates you might want to save it.
 
 54
 00:02:44,001 --> 00:02:46,001
@@ -237,7 +168,7 @@ Each column also has a  tag
 
 55
 00:02:46,001 --> 00:02:50,001
-with useful commands and layout box at the tone.
+with some useful commands and layout box at the tone.
 
 56
 00:02:50,001 --> 00:02:53,001
@@ -257,7 +188,7 @@ Since you cannot watch my hand using the mouse on the screencast,
 
 60
 00:03:03,001 --> 00:03:07,001
-I have to modiy Acme to show the button currently held down above the mouse pointer.
+I have to modiy Acme to show the buttons that are currently held down at the mouse pointer.
 
 61
 00:03:07,001 --> 00:03:13,001
@@ -281,15 +212,15 @@ The scroll bar darkens to represent the entire content, with the light bar showi
 
 66
 00:03:33,001 --> 00:03:37,001
-You can click the bar using button 2 to move it directly to the part.
+You can click the bar with button 2 to move it to different part of the text.
 
 67
 00:03:37,001 --> 00:03:42,001
-You can also click button 1 to scroll up or button 3 to scroll down.
+You can also click with button 1 to scroll up or button 3 to scroll down.
 
 68
 00:03:42,001 --> 00:03:49,001
-The amount the click to scroll depends on where on the scroll bar you click.
+The amount of these clicks to scroll depends on where on the scroll bar you click.
 
 69
 00:03:49,001 --> 00:03:53,001
@@ -377,19 +308,19 @@ I do not have to select text so carefully, when using button 2 or 3,
 
 90
 00:05:28,001 --> 00:05:32,001
-Acme would expend ordinary selection to the given word.
+Acme would expend an ordinary click into selection of the given word.
 
 91
 00:05:32,001 --> 00:05:38,001
 So I can just right click on "button", or on "sampler", and just middle click "Del".
 
 92
-00:05:40,001 --> 00:05:44,001
+00:05:40,001 --> 00:05:45,001
 Acme also assigns convinient meaning to combinations of buttons. 
 
 93
-00:05:44,001 --> 00:05:47,001
-If you select some text with  button 1
+00:05:45,001 --> 00:05:47,001
+If you select some text with  button 1,
 
 94
 00:05:47,001 --> 00:05:51,001
@@ -397,7 +328,7 @@ but keep it held down, then clicking button 2 cuts that text.
 
 95
 00:05:51,001 --> 00:05:54,001
-Clicking button 3 pastes over that text.
+Clicking button 3 pastes over the text.
 
 96
 00:05:54,001 --> 00:05:55,001
@@ -429,7 +360,7 @@ add button 1 to the cord. That executes that command with an argument.
 
 103
 00:06:20,001 --> 00:06:27,001
-For example, we execute the command "echo" with argument "button"
+For example, we can execute the command "echo" with argument "button".
 
 104
 00:06:31,001 --> 00:06:35,001
@@ -473,20 +404,40 @@ If I execute the comand "Edit, s/tag/TAG/g", it apply the "s" command to entire 
 
 114
 00:07:22,001 --> 00:07:27,001
-Acme would not be very powerful if all the commands have to be provided by Acme itself.
+Acme would not be very powerful though if all the commands have to be provided by Acme itself.
 
 115
 00:07:27,001 --> 00:07:33,001
-External programs can be invoked as commands too, as we did with "echo", similar to running them in the shell prompt.
+External programs can be invoked as commands too, like we do with "echo", similar to running them in the shell prompt.
 
 116
 00:07:33,001 --> 00:07:40,001
-Executing "date" actually runs the "date" program and put the output in a temporary windows created to hold the output.
+Executing "date" actually runs the "date" program and put the output in a temporary window created to hold the output.
 
 117
 00:07:40,001 --> 00:07:47,001
-When you run a command in a particular directory, the window for the output has a title name for a file "+Errors" for that directory,
+When you run a command in a particular directory, the window for the output has a title name for a file "+Errors" in that directory,
 
 118
 00:07:47,001 --> 00:07:53,001
-although that is a name of a file that does not exist on disk; it is just the Acme title for the window.
+although that is a name of a file that does not exist on disk. It is just the Acme title for the window.
+
+119
+00:07:53,001 --> 00:07:58,001
+In addtion to running commands, we can pipe selected text through commands.
+
+120
+00:07:58,001 --> 00:08:05,001
+For example, I can selet top few lines and execute "|rot13" to pipe the text through rot13 program,
+
+121
+00:08:05,001 --> 00:09:00,001
+and replace the selection with that program's output.
+
+122
+00:09:00,001 --> 00:08:14,001
+Commands beginning with ">" represents a pipe only write selection through that program.
+
+123
+00:08:14,001 --> 00:08:17,001
+It does not read the output back into the selection.
