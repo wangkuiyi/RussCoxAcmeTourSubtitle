@@ -1,5 +1,5 @@
 1
-00:00:01,001 --> 00:00:06,99
+00:00:01,001 --> 00:00:07,001
 Welcome. This is a quick tour of Acme, a text editor created by Rob Pike almost 20 years ago as part of Plan 9.
 
 3
@@ -11,7 +11,7 @@ Although Rob created Acme on Plan 9, Acme is now available on FreeBSD, Linux,...
 OS X and other Unix systems as part of Plan 9 from User Space.
 
 5
-00:00:16,001 --> 00:00:20,99
+00:00:16,001 --> 00:00:21,001
 There is also a port of Acme to the Inferno operating system which gives it a way to running on Windows.
 
 7
@@ -451,7 +451,7 @@ If I click ">spell", it pipes the selected text to "spell".
 which tells me with one of the error window that I mis-spelled "execute".
 
 126
-00:08:25,001 --> 00:08:32,001 
+00:08:25,001 --> 00:08:32,001
 Similarly, a command beginning with "<" only reads the commands output into the selection.
 
 127
@@ -951,7 +951,7 @@ Or, here is a file containing the output of the mercurial command,
 
 363
 00:17:39,001 --> 00:17:42,001
-showing some commits that I did for the yacc program.
+showing some commits that I did (?) for the yacc program.
 
 364
 00:17:42,001 --> 00:17:47,001
@@ -962,9 +962,266 @@ Want to see a particular commit? Right click on the hash.
 Or, here is a UPS that I was expecting.
 
 366
-00:17:52,001 --> 00:17:55,001
-What to see the status? (Right click on the UPS tracking number.)
+00:17:52,001 --> 00:17:56,001
+What to see the status? (Right click the tracking number.)
 
 367
-00:17:53,001 --> 00:17:57,001
+00:17:56,001 --> 00:17:57,001
 You get the idea.
+
+368
+00:17:57,001 --> 00:18:01,001
+The results below doesn't have to be in Acme window either.
+
+369
+00:18:01,001 --> 00:18:04,001
+In this demo directory, I have a few PDF fiels.
+
+370
+00:18:04,001 --> 00:18:07,001
+Want to view them? Right click.
+
+371
+00:18:09,001 --> 00:18:13,001
+Or, here is a URL. What is there? (Right click.)
+
+372
+00:18:14,001 --> 00:18:17,001
+The loading here is done by a separate program called "plumber".
+
+373
+00:18:17,001 --> 00:18:20,001
+The plumber is controlled by a rule file "/mnt/plumb/rules".
+
+374
+00:18:20,001 --> 00:18:25,001
+That contains patterns to match against button 3 text.
+
+375
+00:18:26,001 --> 00:18:31,001
+This rules says that if the text ends in ".PDF" and the name is an existing file,
+
+376
+00:18:31,001 --> 00:18:39,001
+it should be passed to the Plan 9 "page" program, which is a simple PostScript and PDF viewer you saw.
+
+377
+00:18:39,001 --> 00:18:44,001
+Similarly, if the text begings with "http" or otherwise looks like a URL, 
+
+378
+00:18:44,001 --> 00:18:47,001
+it should be handled by the Web browser.
+
+379
+00:18:48,001 --> 00:18:53,001
+The rules on yours are right (?).  On Plan 9, when programs are crashed,  
+
+380
+00:18:53,001 --> 00:18:57,001
+the kernel left the processes around like Unix zombies for debugging, instead of writting core files.
+
+351
+00:18:57,001 --> 00:19:02,001
+When your program crashes then the shell will show the reason and process ID, not core dumped.
+
+352
+00:19:02,001 --> 00:19:07,001
+I used to use a plumbing rule that when I right click on a number corresponding to a process,
+
+353
+00:19:07,001 --> 00:19:11,001
+which starts a new window with a debugger running and attached to that process.
+
+354
+00:19:11,001 --> 00:19:16,001
+I also had a rule that when I right click on a phone number, it would turn on the speaker on my desk and dial that number.
+
+355
+00:19:16,001 --> 00:19:21,001
+The nicest thing about this is that the click logic is separated from the text formatting.
+
+356
+00:19:21,001 --> 00:19:28,001
+In Web pages, the author of the page has to decide how to interpret the text, where the links are, and where they should go.
+
+357
+00:19:28,001 --> 00:19:34,001
+In the plumbing rules, you control how pre-existing unlinked text get re-interpreted.
+
+358
+00:19:34,001 --> 00:19:38,001
+Let us go through a simple example of using Acme to write some programs.
+
+359
+00:19:38,001 --> 00:19:41,001
+Let's see if we can fix Go issue 3942.
+
+360
+00:19:41,001 --> 00:19:45,001
+What was that again? (Select the text using right button to check the issue.)
+
+361
+00:19:45,001 --> 00:19:49,001
+Alright, JSON is reading one byte at the end of the array,
+
+362
+00:19:49,001 --> 00:19:52,001
+whick means block reading of network data that isn't really coming.
+
+
+363
+00:19:52,001 --> 00:19:55,001
+I feel that I had fixed this before actually.
+
+364
+00:19:55,001 --> 00:19:57,001
+Let's look at this program. (Right clicking the URL to open it.)
+
+365
+00:19:57,001 --> 00:20:02,001
+Let's copy and turn this into text to do some test and development.
+
+366
+00:20:15,001 --> 00:20:20,001
+This is about streaming, so let's put it in "stream_test.go".
+
+367
+00:20:22,001 --> 00:20:23,001
+I am going to introduce a new Acme program called "Watch".
+
+368
+00:20:23,001 --> 00:20:25,001
+It watches the current directory.
+
+369
+00:20:25,001 --> 00:20:30,001
+And each time somethings changes in the direcotry, it re-runs the command given to it as an argument.
+
+370
+00:20:30,001 --> 00:20:33,001
+It maintains the current output in a separate windows.
+
+371
+00:20:33,001 --> 00:20:39,001
+Here, I am going to watch the output of running the short test for this package.
+
+372
+00:20:40,001 --> 00:20:43,001
+Right now it passes. It's good.
+
+373
+00:20:45,001 --> 00:20:46,001
+Let's add our text. 
+
+374
+00:20:47,001 --> 00:20:57,001
+(Type, paste text by clicking button 3, and middle click "Put".)
+
+374
+00:20:57,001 --> 00:21:01,001
+Oops, compile errors. Looks like saying unimported "net".
+
+375
+00:21:01,001 --> 00:21:05,001
+And this is already in the JSON package; you don't need that.
+
+376
+00:21:05,001 --> 00:21:13,001
+(Import package "net" and click "Put")
+
+377
+00:21:13,001 --> 00:21:16,001
+And now we have a deadlock.
+
+378
+00:21:16,001 --> 00:21:21,001
+You can see that "json.Decoder.readValue" has called the "Read" method.
+
+379
+00:21:21,001 --> 00:21:24,001
+We think it shouldn't be reading that far.
+
+380
+00:21:24,001 --> 00:21:27,001
+So let's go to the context of this "read" call, and see why it started the call.
+
+381
+00:21:27,001 --> 00:21:31,001
+I am really surprised that this is reading too far.
+
+382
+00:21:31,001 --> 00:21:34,001
+I really thought I've fixed this.
+
+383
+00:21:41,001 --> 00:21:47,001
+Aha! I did fix this. But I only fixed it for JSON objects, which uses curely braces.
+
+384
+00:21:47,001 --> 00:21:51,001
+JSON arrays which uses square brackets still read too far.
+
+385
+00:21:51,001 --> 00:21:53,001
+So we need to treat arrays like objects.
+
+386
+00:21:53,001 --> 00:21:58,001
+Let's see what this "scanEndObject" is.
+
+387
+00:21:58,001 --> 00:22:02,001
+Hmm. This looks like the definition.
+
+388
+00:22:02,001 --> 00:22:09,001
+Yes. Thankfully, there is already an "scanEndArray".  So let us just treat that the same way.
+
+389
+00:22:21,001 --> 00:22:23,001
+And we are done. Alright, bug fixed.
+
+399
+00:22:29,001 --> 00:22:35,001
+So that is Acme. It is a textual programming system.  It only supports text, no graphics at all.
+
+340
+00:22:35,001 --> 00:22:37,001
+I like to think it as an integrating development environment.
+
+341
+00:22:37,001 --> 00:22:41,001
+because it integrates the separate pieces you already have in your current development environment.
+
+342
+00:22:41,001 --> 00:22:49,001
+You can extending Acme by writing programs that interact with it, or manage windows, or by writing plumbing rules to re-define what loading means.
+
+343
+00:22:49,001 --> 00:22:52,001
+And you can write these extensions in any language you want.
+
+344
+00:22:52,001 --> 00:22:56,001
+We saw dictionaries written in shell script, the terminal window written in C,
+
+345
+00:22:56,001 --> 00:22:58,001
+and the Watch program written in Go.
+
+346
+00:22:58,001 --> 00:23:02,001
+I've been using Acme as my day-to-day work environment for over an decade now.
+
+347
+00:23:02,001 --> 00:23:05,001
+I found it an incredibally productive way to work.
+
+348
+00:23:05,001 --> 00:23:10,001
+If you want to try it out, visit my blog with the link on the screen and the video description.
+
+349
+00:23:10,001 --> 00:23:14,001
+Thanks for watching.
