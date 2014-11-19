@@ -1,1 +1,1 @@
-This project is to create subtitle for Russ Cox's great [video tour](https://www.youtube.com/watch?v=dP1xVpMPn8M) to Acme, the editor created by Rob Pike almost 20 years ago as part of the Plan 9 operating system.
+Subtitle of Russ Cox's [video tour](https://www.youtube.com/watch?v=dP1xVpMPn8M) of Acme.
